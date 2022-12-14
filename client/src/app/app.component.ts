@@ -25,18 +25,18 @@ export class AppComponent implements OnInit, OnDestroy{
   }
 
   connect(){
-    this.subject = webSocket('ws://localhost:5000')
+    this.subject = webSocket('ws://localhost:5000');
     this.conected = true;
       const message = {
         event: 'connection',
         username: this.username,
         id: Date.now()
       }
-      this.subject.next(message)
+      this.subject.next(message);
 
       this.subject.pipe(takeUntil(this.$destroy)).subscribe((msg:any)=>{
       //const message = JSON.parse(msg)
-      this.messages.push(msg)
+      this.messages.push(msg);
     });
 
   }
