@@ -1,0 +1,54 @@
+.container{
+    min-width: 70vw;
+    min-height: 90vh;
+    margin: 0 auto;
+    border: 5px solid rgb(0, 219, 219);
+    border-radius: 15px;
+    max-width: 500px;
+    flex-direction: column;
+    position:relative;
+    
+}
+.messages{
+    height: 100%;
+    margin-bottom: 60px;
+}
+.controls{
+    margin-bottom: 10px;
+    position:absolute;
+    bottom: 0;
+    
+    display:flex;
+    justify-content:space-around;
+    width: 100%;
+    
+    input{
+        width:75%;
+        min-height: 30px;
+    }
+    button{
+        width:15%;
+    }
+}
+.conectMsg{
+    margin: 15px;
+    background-color: rgb(149, 231, 25);
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: 'Calibri';
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 10px;
+}
+.message{
+    font-family: 'Calibri';
+    border-radius: 10px;
+    background-color: rgb(255, 213, 73);
+    margin: 10px 15px;
+    padding: 10px;
+    min-height: 30px;
+    box-sizing: border-box;
+    display: inline-block;
+    
+}
+

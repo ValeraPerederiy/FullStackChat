@@ -1,0 +1,24 @@
+<div class="authorization" *ngIf="conected===false">
+  <input [(ngModel)]="username">
+  <button (click)="connect()">start chating</button>
+</div>
+
+<div class="container" *ngIf="conected===true">
+  
+  <div class="chat" >
+    <div class="messages">
+      
+      <div *ngFor="let mess of messages" >
+        <p *ngIf="mess.event==='connection'" class="conectMsg">
+          {{mess.username}} was conected to chat !!!
+        </p>
+        <p class="message" *ngIf="mess.event==='message'">{{mess.username}} : {{mess.message}}</p>
+      </div>
+    </div>
+    <div class="controls">
+      <input type="text" [(ngModel)]="value" >
+      <button type="submit" (click)="sendMessage(value)">Send</button>
+    </div>
+  </div>
+ 
+</div>
